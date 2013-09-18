@@ -1,0 +1,15 @@
+name = "Add Idea autocomplete"
+description = "Add idea title form autocomplete"
+core = "7.x"
+package = "openidaeL"
+dependencies[] = "ctools"
+dependencies[] = "views"
+features[ctools][] = "views:views_default:3.0"
+features[views_view][] = "all_ideas_titles"
+
+; Information added by drupal.org packaging script on 2013-09-18
+version = "7.x-1.0-beta13"
+core = "7.x"
+project = "idea"
+datestamp = "1379528922"
+
