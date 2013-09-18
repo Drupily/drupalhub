@@ -441,4 +441,6 @@ function idea_install() {
     ->execute();
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+
+  variable_set('caret_position', 'profiles/idea/libraries/jquery_caret_position');
 }

@@ -49,10 +49,14 @@ dependencies[] = htmlmail
 dependencies[] = ideal_comments
 dependencies[] = imce_mkdir
 dependencies[] = imce_wysiwyg
+dependencies[] = inline_devel
 dependencies[] = libraries
 dependencies[] = login_destination
 dependencies[] = logintoboggan_rules
 dependencies[] = message
+dependencies[] = message_ui
+dependencies[] = message_notify
+dependencies[] = message_subscribe
 dependencies[] = metatag_opengraph
 dependencies[] = module_filter
 dependencies[] = nodequeue
@@ -90,8 +94,6 @@ dependencies[] = fe_news
 dependencies[] = fe_default
 dependencies[] = fe_user
 dependencies[] = fe_user_activity
-
-
 
 files[] = openideal.profile
 
