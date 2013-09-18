@@ -1,0 +1,6 @@
+name = DrupalHub Migrate
+description = Import dummy content for the development of DrupalHub
+core = 7.x
+package = DrupalHub
+
+dependencies[] = migrate_ui
