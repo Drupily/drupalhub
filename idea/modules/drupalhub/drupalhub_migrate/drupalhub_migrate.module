@@ -13,6 +13,7 @@ function drupalhub_migrate_migrate_api() {
     'migrations' => array(
       'DrupalHubIdea' => array('class_name' => 'DrupalHubIdea'),
       'DrupalHubUsers' => array('class_name' => 'DrupalHubUsers'),
+      'DrupalHubCategoryTerms' => array('class_name' => 'DrupalHubCategoryTerms'),
     ),
   );
   return $api;

@@ -6,7 +6,7 @@
  */
 
 /**
- * Migrating elements.
+ * Migrating ideas.
  */
 class DrupalHubIdea extends DrupalHubMigrate {
   public $entityType = 'node';
@@ -80,4 +80,12 @@ class DrupalHubUsers extends Migration {
     $edit = array();
     user_save($entity, $edit);
   }
+}
+
+/**
+ * Migrate terms
+ */
+class DrupalHubCategoryTerms extends DrupalHubMigrate {
+  public $entityType = 'taxonomy_term';
+  public $bundle = 'categories';
 }

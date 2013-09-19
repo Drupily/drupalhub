@@ -6,12 +6,27 @@
  */
 
 abstract class DrupalHubMigrate extends Migration {
+  public $entityType;
+  public $bundle;
 
   function __construct() {
     parent::__construct();
     $this->description = t('Import @type - @bundle from CSV file.', array('@type' => $this->entityType, '@bundle' => $this->bundle));
 
+  if ($this->entityType == 'taxonomy_term') {
+    $class_name = 'MigrateDestinationTerm';
+
+    $this->csvColumns = array(
+      array('id', 'ID'),
+      array('name', 'Name'),
+      array('description', 'Description'),
+    );
+    $this->addFieldMapping('name', 'name');
+    $this->addFieldMapping('description', 'description');
+  }
+  else {
     $class_name = 'MigrateDestinationNode';
+  }
 
     // Create a map object for tracking the relationships between source rows
     $key = array(
