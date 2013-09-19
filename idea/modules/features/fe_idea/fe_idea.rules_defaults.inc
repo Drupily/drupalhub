@@ -367,20 +367,48 @@ function fe_idea_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_user_vote_for_idea_node'] = entity_import('rules_config', '{ "rules_user_vote_for_idea_node" : {
-      "LABEL" : "User Vote for idea node",
+  $items['rules_user_vote_against_idea_comment'] = entity_import('rules_config', '{ "rules_user_vote_against_idea_comment" : {
+      "LABEL" : "User Vote against idea comment",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Idea", "Userpoints" ],
+      "REQUIRES" : [ "rules", "voting_rules", "userpoints_rules" ],
+      "ON" : [ "voting_rules_insert_comment" ],
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "comment:node" ],
+            "type" : { "value" : { "idea" : "idea" } }
+          }
+        },
+        { "voting_rules_condition_check_vote_value" : { "vote" : [ "vote" ], "operator" : "\\u003C", "value" : "0" } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "vote:user" ],
+            "points" : "5",
+            "tid" : "0",
+            "entity" : [ "vote:user" ],
+            "operation" : "Insert",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_user_vote_against_idea_node'] = entity_import('rules_config', '{ "rules_user_vote_against_idea_node" : {
+      "LABEL" : "User Vote against idea node",
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "Idea", "Userpoints" ],
       "REQUIRES" : [ "rules", "voting_rules", "userpoints_rules" ],
       "ON" : [ "voting_rules_insert_node" ],
       "IF" : [
         { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "idea" : "idea" } } } },
-        { "voting_rules_condition_check_vote_value" : { "vote" : [ "vote" ], "operator" : "\\u003E", "value" : "0" } }
+        { "voting_rules_condition_check_vote_value" : { "vote" : [ "vote" ], "operator" : "\\u003C", "value" : "0" } }
       ],
       "DO" : [
         { "userpoints_action_grant_points" : {
             "user" : [ "vote:user" ],
-            "points" : "10",
+            "points" : "5",
             "tid" : "0",
             "entity" : [ "vote:user" ],
             "operation" : "Insert",
@@ -403,6 +431,30 @@ function fe_idea_default_rules_configuration() {
             "type" : { "value" : { "idea" : "idea" } }
           }
         },
+        { "voting_rules_condition_check_vote_value" : { "vote" : [ "vote" ], "operator" : "\\u003E", "value" : "0" } }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "vote:user" ],
+            "points" : "10",
+            "tid" : "0",
+            "entity" : [ "vote:user" ],
+            "operation" : "Insert",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
+  $items['rules_user_vote_for_idea_node'] = entity_import('rules_config', '{ "rules_user_vote_for_idea_node" : {
+      "LABEL" : "User Vote for idea node",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Idea", "Userpoints" ],
+      "REQUIRES" : [ "rules", "voting_rules", "userpoints_rules" ],
+      "ON" : [ "voting_rules_insert_node" ],
+      "IF" : [
+        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "idea" : "idea" } } } },
         { "voting_rules_condition_check_vote_value" : { "vote" : [ "vote" ], "operator" : "\\u003E", "value" : "0" } }
       ],
       "DO" : [
