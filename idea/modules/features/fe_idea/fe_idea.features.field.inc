@@ -10,6 +10,66 @@
 function fe_idea_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'comment-comment_node_idea-field_voting'.
+  $fields['comment-comment_node_idea-field_voting'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_voting',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'vud_field',
+      'settings' => array(
+        'votingapi_tag' => 'vote',
+        'vud_widget' => 'updown',
+      ),
+      'translatable' => '0',
+      'type' => 'vud_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'comment_node_idea',
+      'default_value' => array(
+        0 => array(
+          'vud_widget' => 'updown',
+          'votingapi_tag' => 'vote',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'vud_field',
+          'settings' => array(),
+          'type' => 'default',
+          'weight' => '1',
+        ),
+      ),
+      'entity_type' => 'comment',
+      'field_name' => 'field_voting',
+      'label' => 'Voting',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+        'votingapi_tag' => 'vote',
+        'vud_widget' => 'alternate',
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'vud_field',
+        'settings' => array(),
+        'type' => 'vud_field_default_widget',
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported field: 'node-idea-body'.
   $fields['node-idea-body'] = array(
     'field_config' => array(
@@ -740,6 +800,7 @@ function fe_idea_field_default_fields() {
   t('Please share you idea.');
   t('Social Buttons');
   t('Vote');
+  t('Voting');
   t('Your Idea');
 
   return $fields;
