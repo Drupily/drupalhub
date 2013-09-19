@@ -16,16 +16,21 @@ class DrupalHubIdea extends DrupalHubMigrate {
     array('id', 'Unique ID'),
     array('title', 'Title'),
     array('body', 'Body'),
+    array('field_category', 'Category'),
     array('uid', 'User'),
   );
 
-  public $dependencies = array('DrupalHubUsers');
+  public $dependencies = array('DrupalHubUsers', 'DrupalHubCategoryTerms');
 
   public function __construct() {
     parent::__construct();
 
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('body', 'body');
+    $this->addFieldMapping('field_category', 'field_category')
+      ->sourceMigration(array('DrupalHubCategoryTerms'))
+      ->arguments(array('source_type' => 'tid'));
+
     $this->addFieldMapping('uid', 'uid')
       ->sourceMigration('DrupalHubUsers');
   }
