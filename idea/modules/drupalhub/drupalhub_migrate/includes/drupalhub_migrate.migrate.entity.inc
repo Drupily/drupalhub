@@ -24,7 +24,7 @@ abstract class DrupalHubMigrate extends Migration {
     $this->map = new MigrateSQLMap($this->machineName, $key, MigrateDestinationNode::getKeySchema($this->entityType));
 
     // Create a MigrateSource object.
-    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'drupalhub_migreate') . '/csv/' . $this->entityType . '/' . $this->bundle . '.csv', $this->csvColumns, array('header_rows' => 1));
+    $this->source = new MigrateSourceCSV(drupal_get_path('module', 'drupalhub_migrate') . '/csv/' . $this->entityType . '/' . $this->bundle . '.csv', $this->csvColumns, array('header_rows' => 1));
     $this->destination = new $class_name($this->bundle, array('text_format' => 'filtered_html'));
   }
 }

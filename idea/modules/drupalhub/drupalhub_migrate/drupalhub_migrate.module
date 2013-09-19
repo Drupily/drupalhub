@@ -11,7 +11,8 @@ function drupalhub_migrate_migrate_api() {
   $api = array(
     'api' => 2,
     'migrations' => array(
-      'Ideas' => array('class_name' => 'DrupalHubIdeas'),
+      'DrupalHubIdea' => array('class_name' => 'DrupalHubIdea'),
+      'DrupalHubUsers' => array('class_name' => 'DrupalHubUsers'),
     ),
   );
   return $api;
