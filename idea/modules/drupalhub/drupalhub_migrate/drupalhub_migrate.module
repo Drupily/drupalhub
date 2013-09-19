@@ -10,6 +10,9 @@
 function drupalhub_migrate_migrate_api() {
   $api = array(
     'api' => 2,
+    'migrations' => array(
+      'Ideas' => array('class_name' => 'DrupalHubIdeas'),
+    ),
   );
   return $api;
 }
