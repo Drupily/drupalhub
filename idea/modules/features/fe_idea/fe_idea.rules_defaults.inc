@@ -371,10 +371,11 @@ function fe_idea_default_rules_configuration() {
       "LABEL" : "User Vote",
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "Idea", "Userpoints" ],
-      "REQUIRES" : [ "rules", "userpoints_rules", "voting_rules" ],
+      "REQUIRES" : [ "rules", "voting_rules", "userpoints_rules" ],
       "ON" : [ "voting_rules_insert_node" ],
       "IF" : [
-        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "idea" : "idea" } } } }
+        { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "idea" : "idea" } } } },
+        { "voting_rules_condition_check_vote_value" : { "vote" : [ "vote" ], "operator" : "\\u003E", "value" : "0" } }
       ],
       "DO" : [
         { "userpoints_action_grant_points" : {
@@ -390,18 +391,19 @@ function fe_idea_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_user_vote_comment'] = entity_import('rules_config', '{ "rules_user_vote_comment" : {
-      "LABEL" : "User Vote comment",
+  $items['rules_user_vote_for_comment'] = entity_import('rules_config', '{ "rules_user_vote_for_comment" : {
+      "LABEL" : "User Vote for comment",
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "Idea", "Userpoints" ],
-      "REQUIRES" : [ "rules", "userpoints_rules", "voting_rules" ],
+      "REQUIRES" : [ "rules", "voting_rules", "userpoints_rules" ],
       "ON" : [ "voting_rules_insert_comment" ],
       "IF" : [
         { "node_is_of_type" : {
             "node" : [ "comment:node" ],
             "type" : { "value" : { "idea" : "idea" } }
           }
-        }
+        },
+        { "voting_rules_condition_check_vote_value" : { "vote" : [ "vote" ], "operator" : "\\u003E", "value" : "0" } }
       ],
       "DO" : [
         { "userpoints_action_grant_points" : {

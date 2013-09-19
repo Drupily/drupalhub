@@ -79,6 +79,7 @@ features[rules_config][] = rules_user_add_idea
 features[rules_config][] = rules_user_idea_in_action
 features[rules_config][] = rules_user_idea_launch
 features[rules_config][] = rules_user_vote
+features[rules_config][] = rules_user_vote_for_comment
 features[user_permission][] = admin ideas
 features[user_permission][] = create field_challenge_ref
 features[user_permission][] = create field_in_action
