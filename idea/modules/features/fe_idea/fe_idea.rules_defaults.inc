@@ -390,5 +390,32 @@ function fe_idea_default_rules_configuration() {
       ]
     }
   }');
+  $items['rules_user_vote_comment'] = entity_import('rules_config', '{ "rules_user_vote_comment" : {
+      "LABEL" : "User Vote comment",
+      "PLUGIN" : "reaction rule",
+      "TAGS" : [ "Idea", "Userpoints" ],
+      "REQUIRES" : [ "rules", "userpoints_rules", "voting_rules" ],
+      "ON" : [ "voting_rules_insert_comment" ],
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "comment:node" ],
+            "type" : { "value" : { "idea" : "idea" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "userpoints_action_grant_points" : {
+            "user" : [ "vote:user" ],
+            "points" : "10",
+            "tid" : "0",
+            "entity" : [ "vote:user" ],
+            "operation" : "Insert",
+            "display" : 1,
+            "moderate" : "default"
+          }
+        }
+      ]
+    }
+  }');
   return $items;
 }
