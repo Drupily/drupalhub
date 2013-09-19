@@ -114,6 +114,9 @@ projects[metatag][subdir] = contrib
 projects[module_filter][version] = "1.8"
 projects[module_filter][subdir] = contrib
 
+projects[migrate][version] = "2.5"
+projects[migrate][subdir] = contrib
+
 projects[nodequeue][version] = "2.0-beta1"
 projects[nodequeue][subdir] = contrib
 
