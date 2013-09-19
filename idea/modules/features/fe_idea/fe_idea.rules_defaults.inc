@@ -367,8 +367,8 @@ function fe_idea_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_user_vote'] = entity_import('rules_config', '{ "rules_user_vote" : {
-      "LABEL" : "User Vote",
+  $items['rules_user_vote_for_idea_node'] = entity_import('rules_config', '{ "rules_user_vote_for_idea_node" : {
+      "LABEL" : "User Vote for idea node",
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "Idea", "Userpoints" ],
       "REQUIRES" : [ "rules", "voting_rules", "userpoints_rules" ],
@@ -391,8 +391,8 @@ function fe_idea_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_user_vote_for_comment'] = entity_import('rules_config', '{ "rules_user_vote_for_comment" : {
-      "LABEL" : "User Vote for comment",
+  $items['rules_user_vote_for_idea_comment'] = entity_import('rules_config', '{ "rules_user_vote_for_idea_comment" : {
+      "LABEL" : "User Vote for idea comment",
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "Idea", "Userpoints" ],
       "REQUIRES" : [ "rules", "voting_rules", "userpoints_rules" ],
