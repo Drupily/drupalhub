@@ -24,6 +24,9 @@ abstract class DrupalHubMigrate extends Migration {
     $this->addFieldMapping('name', 'name');
     $this->addFieldMapping('description', 'description');
   }
+  else if ($this->entityType == 'comment') {
+    $class_name = 'MigrateDestinationComment';
+  }
   else {
     $class_name = 'MigrateDestinationNode';
   }
