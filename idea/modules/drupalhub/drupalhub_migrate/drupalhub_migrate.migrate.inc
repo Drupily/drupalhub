@@ -114,11 +114,12 @@ class DrupalHubIdeaComments extends DrupalHubMigrate {
 
     $this->addFieldMapping('nid', 'node')
       ->sourceMigration('DrupalHubIdea');
-    $this->addFieldMapping('uid', 'uid')
-      ->sourceMigration('DrupalHubUsers');
 
     // TODO: Fix.
     $this->addFieldMapping('comment_body', 'body');
+
+    $this->addFieldMapping('uid', 'uid')
+      ->sourceMigration('DrupalHubUsers');
 
     // Get the users which voted against the comment and vor the comment.
     $this->addFieldMapping('for', 'for')
