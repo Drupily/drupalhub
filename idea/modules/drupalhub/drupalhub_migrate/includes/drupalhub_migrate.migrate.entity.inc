@@ -24,6 +24,9 @@ abstract class DrupalHubMigrate extends Migration {
     $this->addFieldMapping('name', 'name');
     $this->addFieldMapping('description', 'description');
   }
+  else if ($this->entityType == 'comment') {
+    $class_name = 'MigrateDestinationComment';
+  }
   else {
     $class_name = 'MigrateDestinationNode';
   }
@@ -41,5 +44,28 @@ abstract class DrupalHubMigrate extends Migration {
     // Create a MigrateSource object.
     $this->source = new MigrateSourceCSV(drupal_get_path('module', 'drupalhub_migrate') . '/csv/' . $this->entityType . '/' . $this->bundle . '.csv', $this->csvColumns, array('header_rows' => 1));
     $this->destination = new $class_name($this->bundle, array('text_format' => 'filtered_html'));
+  }
+
+  /**
+   * Vote for/against comments/users
+   * @param $uids
+   *  Lists of users IDs.
+   * @param $type
+   *  Define the voting type: against/for
+   * @param $entity_id
+   *  The entity ID of the comment/node.
+   */
+  public function vote($uids, $type, $entity_id) {
+    foreach ($uids as $uid) {
+      $votes = array(
+        'entity_type' => $this->entityType,
+        'entity_id' => $entity_id,
+        'value' => $type == 'for' ? 1 : -1,
+        'value_type' => 'point',
+        'tag' => 'vote',
+        'uid' => $uid,
+      );
+      votingapi_add_votes($votes);
+    }
   }
 }
