@@ -443,6 +443,16 @@ function fe_idea_default_rules_configuration() {
             "display" : 1,
             "moderate" : "default"
           }
+        },
+        { "userpoints_action_grant_points" : {
+            "user" : [ "comment:author" ],
+            "points" : "10",
+            "tid" : "0",
+            "entity" : [ "comment:author" ],
+            "operation" : "insert",
+            "display" : 1,
+            "moderate" : "default"
+          }
         }
       ]
     }
