@@ -110,12 +110,12 @@ class DrupalHubIdeaComments extends DrupalHubMigrate {
   public function __construct() {
     parent::__construct();
 
-    $this->addFieldMapping('body', 'body');
-    $this->addFieldMapping('node', 'nid')
+    $this->addFieldMapping('nid', 'node')
       ->sourceMigration(array('DrupalHubIdea'));
-//      ->arguments(array('source_type' => 'tid'));
-
     $this->addFieldMapping('uid', 'uid')
       ->sourceMigration('DrupalHubUsers');
+
+    // TODO: Fix.
+    $this->addFieldMapping('comment_body', 'body');
   }
 }
