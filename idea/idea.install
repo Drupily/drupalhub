@@ -445,10 +445,9 @@ function idea_install() {
   variable_set('caret_position', 'profiles/idea/libraries/jquery_caret_position');
 
    // Installing Hebrew
-  locale_add_language('he', 'Hebrew', 'עברית', LANGUAGE_RTL);
+  locale_add_language('he', 'Hebrew', 'עברית', LANGUAGE_RTL, '', '', TRUE, FALSE);
   $negotation = array(
     LOCALE_LANGUAGE_NEGOTIATION_URL => 2,
-    LOCALE_LANGUAGE_NEGOTIATION_BROWSER => 4,
   );
   language_negotiation_set('language', $negotation);
 }
