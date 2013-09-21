@@ -58,7 +58,7 @@ function fe_idea_field_default_fields() {
       'settings' => array(
         'user_register_form' => FALSE,
         'votingapi_tag' => 'vote',
-        'vud_widget' => 'alternate',
+        'vud_widget' => 'thumbs',
       ),
       'widget' => array(
         'active' => 0,
@@ -776,7 +776,7 @@ function fe_idea_field_default_fields() {
       'settings' => array(
         'user_register_form' => FALSE,
         'votingapi_tag' => 'vote',
-        'vud_widget' => 'alternate',
+        'vud_widget' => 'thumbs',
       ),
       'widget' => array(
         'active' => 0,
