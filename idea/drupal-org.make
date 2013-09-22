@@ -101,7 +101,6 @@ projects[mailsystem][subdir] = contrib
 
 projects[message][version] = "1.9"
 projects[message][subdir] = contrib
-projects[message][patch][] = "https://drupal.org/files/message-text-language-none-locale-2094897-1.patch"
 
 projects[message_ui][version] = "1.4"
 projects[message_ui][subdir] = contrib
