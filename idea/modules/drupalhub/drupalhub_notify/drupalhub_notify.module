@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Main module file for notifying users on actions which they concerned to them.
+ */
+
+/**
+ * Implements hook_comment_insert().
+ *
+ * When a new comment is created all the subscribed users to the node need to
+ * receive notifications on this action.
+ */
+function drupalhub_comment_insert($comment) {
+}
