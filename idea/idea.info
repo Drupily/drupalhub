@@ -57,6 +57,7 @@ dependencies[] = logintoboggan_rules
 dependencies[] = message
 dependencies[] = message_ui
 dependencies[] = message_notify
+dependencies[] = message_notify_ui
 dependencies[] = message_subscribe
 dependencies[] = metatag_opengraph
 dependencies[] = migrate
