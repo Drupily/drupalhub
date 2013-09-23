@@ -29,7 +29,7 @@ function drupalhub_notify_default_message_type() {
       "token options" : { "clear" : 0 },
       "purge" : { "override" : 0, "enabled" : 0, "quota" : "", "days" : "" }
     },
-    "language" : "he",
+    "language" : "en",
     "arguments" : null,
     "message_text" : {
       "en" : [
@@ -39,9 +39,9 @@ function drupalhub_notify_default_message_type() {
           "safe_value" : "\\u003Cp\\u003EHello [message:user:name] - new comment\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "Hello [message:user:name],\\n\\nThe user [message:field_user:name] has made a comment on the question [message:field_node:title] which you asked to followed.",
-          "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003EHello [message:user:name],\\u003C\\/p\\u003E\\n\\u003Cp\\u003EThe user [message:field_user:name] has made a comment on the question [message:field_node:title] which you asked to followed.\\u003C\\/p\\u003E\\n"
+          "value" : "Hello [message:user:name],\\r\\n\\r\\n\\u003Ca href=\\u0022[message:field-user:url]\\u0022\\u003E[message:field-user:name]\\u003C\\/a\\u003E has made a comment on \\u003Ca href=\\u0022[message:field-node:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E.",
+          "format" : "full_html",
+          "safe_value" : "\\u003Cp\\u003EHello [message:user:name],\\u003C\\/p\\u003E\\n\\u003Cp\\u003E\\u003Ca href=\\u0022[message:field-user:url]\\u0022\\u003E[message:field-user:name]\\u003C\\/a\\u003E has made a comment on \\u003Ca href=\\u0022[message:field-node:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E.\\u003C\\/p\\u003E\\n"
         }
       ],
       "he" : [
@@ -51,9 +51,9 @@ function drupalhub_notify_default_message_type() {
           "safe_value" : "\\u003Cp\\u003E\\u05e9\\u05dc\\u05d5\\u05dd [message:user:name] - \\u05ea\\u05d2\\u05d5\\u05d1\\u05d4 \\u05d7\\u05d3\\u05e9\\u05d4\\u003C\\/p\\u003E\\n"
         },
         {
-          "value" : "\\u05e9\\u05dc\\u05d5\\u05dd [message:user:name],\\r\\n\\r\\n\\u05d4\\u05de\\u05e9\\u05ea\\u05de\\u05e9 [message:field_user:name] \\u05d4\\u05d2\\u05d9\\u05d1 \\u05dc\\u05e9\\u05d0\\u05dc\\u05d4 [message:field_node:title] \\u05d0\\u05e9\\u05e8 \\u05d1\\u05d9\\u05e7\\u05e9\\u05ea \\u05dc\\u05e2\\u05e7\\u05d5\\u05d1 \\u05d0\\u05d7\\u05e8\\u05d9\\u05d4.",
+          "value" : "\\u05e9\\u05dc\\u05d5\\u05dd [message:user:name],\\n\\n\\u003Ca href=\\u0022[message:field-user:url]\\u0022\\u003E[message:field-user:name]\\u003C\\/a\\u003E \\u05d4\\u05d2\\u05d9\\u05d1 \\u05e2\\u05dc \\u003Ca href=\\u0022[message:field-node:url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E.",
           "format" : "filtered_html",
-          "safe_value" : "\\u003Cp\\u003E\\u05e9\\u05dc\\u05d5\\u05dd [message:user:name],\\u003C\\/p\\u003E\\n\\u003Cp\\u003E\\u05d4\\u05de\\u05e9\\u05ea\\u05de\\u05e9 [message:field_user:name] \\u05d4\\u05d2\\u05d9\\u05d1 \\u05dc\\u05e9\\u05d0\\u05dc\\u05d4 [message:field_node:title] \\u05d0\\u05e9\\u05e8 \\u05d1\\u05d9\\u05e7\\u05e9\\u05ea \\u05dc\\u05e2\\u05e7\\u05d5\\u05d1 \\u05d0\\u05d7\\u05e8\\u05d9\\u05d4.\\u003C\\/p\\u003E\\n"
+          "safe_value" : "\\u003Cp\\u003E\\u05e9\\u05dc\\u05d5\\u05dd [message:user:name],\\u003C\\/p\\u003E\\n\\u003Cp\\u003E\\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-user:name]\\u003C\\/a\\u003E \\u05d4\\u05d2\\u05d9\\u05d1 \\u05e2\\u05dc \\u003Ca href=\\u0022url]\\u0022\\u003E[message:field-node:title]\\u003C\\/a\\u003E.\\u003C\\/p\\u003E\\n"
         }
       ]
     },

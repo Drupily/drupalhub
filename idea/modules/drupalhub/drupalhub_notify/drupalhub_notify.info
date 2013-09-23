@@ -12,6 +12,7 @@ dependencies[] = migrate_ui
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
+features[field][] = message-comment_on_followed_node-field_comment
 features[field][] = message-comment_on_followed_node-field_node
 features[field][] = message-comment_on_followed_node-field_user
 features[message_type][] = comment_on_followed_node
