@@ -10,6 +10,10 @@
  *
  * When a new comment is created all the subscribed users to the node need to
  * receive notifications on this action.
+ *
+ * TODO:  When saleability will be needed - use Message subscribe. This should
+ *        be done via a variable that will determine the minimum number of
+ *        messages to send via Message subscribe.
  */
 function drupalhub_notify_comment_insert($comment) {
   $followers = drupalhub_notify_get_nodes_watchers($comment);
