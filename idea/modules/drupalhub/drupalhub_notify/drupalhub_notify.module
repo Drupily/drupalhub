@@ -1,9 +1,10 @@
 <?php
-
 /**
  * @file
  * Main module file for notifying users on actions which they concerned to them.
  */
+
+include_once('drupalhub_notify.features.inc');
 
 /**
  * Implements hook_comment_insert().
