@@ -1,8 +1,6 @@
 name = DrupalHub
-description = General setting and functionallity for DrupalHub
 core = 7.x
 package = DrupalHub
-php = 5.2.4
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * drupaluhb.strongarm.inc
+ * drupalhub.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function drupaluhb_strongarm() {
+function drupalhub_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

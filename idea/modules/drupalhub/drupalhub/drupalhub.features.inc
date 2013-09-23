@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * drupaluhb.features.inc
+ * drupalhub.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function drupaluhb_ctools_plugin_api() {
+function drupalhub_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");

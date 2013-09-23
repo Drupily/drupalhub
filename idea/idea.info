@@ -65,6 +65,7 @@ dependencies[] = migrate_ui
 dependencies[] = module_filter
 dependencies[] = nodequeue
 dependencies[] = page_title
+dependencies[] = pathauto
 dependencies[] = quicktabs
 dependencies[] = radioactivity
 dependencies[] = rules_admin
