@@ -1,0 +1,64 @@
+<?php
+/**
+ * @file
+ * Main module file for notifying users on actions which they concerned to them.
+ */
+
+include_once('drupalhub_notify.features.inc');
+
+/**
+ * Implements hook_comment_insert().
+ *
+ * When a new comment is created all the subscribed users to the node need to
+ * receive notifications on this action.
+ *
+ * TODO:  When saleability will be needed - use Message subscribe. This should
+ *        be done via a variable that will determine the minimum number of
+ *        messages to send via Message subscribe.
+ */
+function drupalhub_notify_comment_insert($comment) {
+  $followers = drupalhub_notify_get_nodes_watchers($comment);
+
+  foreach ($followers as $follower) {
+    $message = message_create('comment_on_followed_node');
+    $message->uid = $follower->uid;
+
+    $wrapper = entity_metadata_wrapper('message', $message);
+    $wrapper->field_node->set($comment->nid);
+    $wrapper->field_comment->set($comment);
+    $wrapper->field_user->set($comment->uid);
+    $wrapper->save();
+
+    try {
+      message_notify_send_mail($message);
+    }
+    catch (Exception $e) {
+      $text = t('An error has occurred when trying to send the message via email: @message', array('@message' => $e->getMessage()));
+
+      drupal_set_message($text, 'error');
+      watchdog('drupalhub_notify', $text);
+    }
+  }
+}
+
+/**
+ * Get all the users which following the node of the comment.
+ *
+ * @param $comment
+ *  The comment object.
+ * @param $load
+ *  Determine if we need to load the users or just return array of user IDs.
+ *
+ * @return
+ *  Array of users/users ID's which followed the node comment.
+ */
+function drupalhub_notify_get_nodes_watchers($comment, $load = TRUE) {
+  $result = db_select('watcher_nodes', 'wn')
+    ->fields('wn', array('uid'))
+    ->condition('nid', $comment->nid)
+    ->condition('uid', $comment->uid, '!=')
+    ->execute()
+    ->fetchAssoc();
+
+  return $load ? user_load_multiple($result) : $result;
+}
