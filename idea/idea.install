@@ -450,4 +450,5 @@ function idea_install() {
     LOCALE_LANGUAGE_NEGOTIATION_URL => 2,
   );
   language_negotiation_set('language', $negotation);
+  language_negotiation_set('page_manager_node_view_disabled', FALSE);
 }
