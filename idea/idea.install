@@ -443,6 +443,7 @@ function idea_install() {
   variable_set('node_admin_theme', '1');
 
   variable_set('caret_position', 'profiles/idea/libraries/jquery_caret_position');
+  variable_set('page_manager_node_view_disabled', FALSE);
 
    // Installing Hebrew
   locale_add_language('he', 'Hebrew', 'עברית', LANGUAGE_RTL, '', '', TRUE, FALSE);
@@ -450,5 +451,4 @@ function idea_install() {
     LOCALE_LANGUAGE_NEGOTIATION_URL => 2,
   );
   language_negotiation_set('language', $negotation);
-  language_negotiation_set('page_manager_node_view_disabled', FALSE);
 }
