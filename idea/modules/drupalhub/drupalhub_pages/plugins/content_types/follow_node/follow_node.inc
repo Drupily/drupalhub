@@ -9,13 +9,11 @@ $plugin = array(
 
 function drupalhub_pages_follow_node_content_type_render($subtype, $conf, $args, $context) {
   global $language;
-
   $block = new stdClass();
-
   $node = $context->data;
+
   watcher_node_view($node, 'full', $language->language);
 
-  $block->content = $node->content['watcher']['#markup'];
-
+  $block->content = empty($node->content['watcher']['#markup']) ? '' : $node->content['watcher']['#markup'];
   return $block;
 }
