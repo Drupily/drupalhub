@@ -29,6 +29,7 @@ class DrupalHubIdea extends DrupalHubMigrate {
     $this->addFieldMapping('body', 'body');
     $this->addFieldMapping('field_category', 'field_category')
       ->sourceMigration(array('DrupalHubCategoryTerms'))
+      ->separator("|")
       ->arguments(array('source_type' => 'tid'));
 
     $this->addFieldMapping('uid', 'uid')

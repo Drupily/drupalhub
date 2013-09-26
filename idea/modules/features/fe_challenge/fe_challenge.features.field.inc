@@ -85,14 +85,17 @@ function fe_challenge_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-challenge-field_category'
+  // Exported field: 'node-challenge-field_category'.
   $fields['node-challenge-field_category'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_category',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(

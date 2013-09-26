@@ -126,6 +126,9 @@ projects[nodequeue][subdir] = contrib
 projects[page_title][version] = "2.7"
 projects[page_title][subdir] = contrib
 
+projects[panels][version] = "3.3"
+projects[panels][subdir] = contrib
+
 projects[quicktabs][version] = "3.5"
 projects[quicktabs][subdir] = contrib
 

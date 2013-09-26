@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalHub pages feature.
+ */
+
+include_once 'drupalhub_pages.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function drupalhub_pages_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools' && !empty($plugin)) {
+    return "plugins/$plugin";
+  }
+}
+
+/**
+ * Implements hook_node_load().
+ *
+ * When which an idea we need to add a CSS. This is temporary until we have a
+ * custom theme.
+ */
+function drupalhub_pages_node_load($nodes, $types) {
+  if (!in_array('idea', $types)) {
+    return;
+  }
+
+  drupal_add_css(drupal_get_path('module', 'drupalhub_pages') . '/css/drupalhub_pages.css');
+}
