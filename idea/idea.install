@@ -64,7 +64,7 @@ function idea_install() {
 
   // Set admin and default theme
   $enable = array(
-    'theme_default' => 'plato',
+    'theme_default' => 'drupalhub_basetheme',
     'admin_theme' => 'seven',
   );
   theme_enable($enable);

@@ -1,5 +1,5 @@
-name = Bootstrap Sub-theme
-description = A Bootstrap Sub-theme.
+name = DrupalHub theme
+description = Base theme for DrupalHub. Based on Bootstrap.
 core = 7.x
 base theme = bootstrap
 
