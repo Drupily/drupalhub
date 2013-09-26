@@ -79,7 +79,7 @@ function fe_idea_context_default_contexts() {
   $export['category_page'] = $context;
 
   $context = new stdClass();
-  $context->disabled = TRUE; /* Edit this to true to make a default context disabled initially */
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'front';
   $context->description = 'the home page';
