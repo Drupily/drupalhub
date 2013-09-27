@@ -48,6 +48,9 @@ projects[entityreference][subdir] = contrib
 projects[faq][version] = "1.0-rc2"
 projects[faq][subdir] = contrib
 
+projects[fboauth][version] = "1.6"
+projects[fboauth][subdir] = contrib
+
 projects[features][version] = "1.0"
 projects[features][subdir] = contrib
 

@@ -9,9 +9,20 @@
  * Implements hook_install().
  */
 function drupalhub_social_install() {
-  // Twitter settings.
-  variable_set('twitter_consumer_key', TWITTER_KEY);
-  variable_set('twitter_consumer_secret', TWITTER_SECRET);
-  variable_set('twitter_signin_register', TRUE);
-  variable_set('twitter_signin_button', 'Sign-in-with-Twitter-darker.png');
+  $settings = array(
+    // Twitter settings.
+    'twitter_consumer_key' => TWITTER_KEY,
+    'twitter_consumer_secret' => TWITTER_SECRET,
+    'twitter_signin_register' => TRUE,
+    'twitter_signin_button' => 'Sign-in-with-Twitter-darker.png',
+
+    // Facebook settings.
+    'fboauth_id' => FACEBOOK_ID,
+    'fboauth_secret' => FACEBOOK_SECRET,
+    'fboauth_user_username' => 'name',
+  );
+
+  foreach ($settings as $name => $value) {
+    variable_set($name, $value);
+  }
 }
