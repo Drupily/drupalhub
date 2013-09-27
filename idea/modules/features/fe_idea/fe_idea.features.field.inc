@@ -712,10 +712,19 @@ function fe_idea_field_default_fields() {
       'label' => 'Social Buttons',
       'required' => 0,
       'settings' => array(
-        'button-0' => '<div id="fb-root"></div><script> (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1"; fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));</script> <div class="fb-like" data-send="false" data-layout="button_count" data-width="1" data-show-faces="false"></div>',
+        'button-0' => '<a href="#" 
+  onclick="
+    window.open(
+      \'https://www.facebook.com/sharer/sharer.php?u=\'+encodeURIComponent(location.href), 
+      \'facebook-share-dialog\', 
+      \'width=626,height=436\'); 
+    return false;">
+  Share on Facebook
+</a>',
         'button-1' => '<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>',
         'button-2' => '<div class="g-plusone" data-size="medium"></div><script>(function() {var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);})();</script>',
         'button-3' => '<script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right"></script>',
+        'button-4' => '',
         'init' => FALSE,
         'user_register_form' => FALSE,
       ),
