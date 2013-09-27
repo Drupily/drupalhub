@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install settings for DrupalHub.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function drupalhub_social_install() {
+  // Twitter settings.
+  variable_set('twitter_consumer_key', TWITTER_KEY);
+  variable_set('twitter_consumer_secret', TWITTER_SECRET);
+  variable_set('twitter_signin_register', TRUE);
+  variable_set('twitter_signin_button', 'Sign-in-with-Twitter-darker.png');
+}

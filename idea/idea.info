@@ -106,6 +106,7 @@ dependencies[] = fe_user_activity
 dependencies[] = drupalhub_migrate
 dependencies[] = drupalhub_notify
 dependencies[] = drupalhub_pages
+dependencies[] = drupalhub_social
 
 files[] = openideal.profile
 

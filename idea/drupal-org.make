@@ -123,6 +123,9 @@ projects[migrate][subdir] = contrib
 projects[nodequeue][version] = "2.0-beta1"
 projects[nodequeue][subdir] = contrib
 
+projects[oauth][version] = 3.1
+projects[oauth][subdir] = contrib
+
 projects[page_title][version] = "2.7"
 projects[page_title][subdir] = contrib
 
@@ -152,6 +155,9 @@ projects[token][subdir] = contrib
 
 projects[top_searches][version] = "1.0"
 projects[top_searches][subdir] = contrib
+
+projects[twitter][version] = "5.8"
+projects[twitter][subdir] = contrib
 
 projects[userpoints][version] = "1.0"
 projects[userpoints][subdir] = contrib

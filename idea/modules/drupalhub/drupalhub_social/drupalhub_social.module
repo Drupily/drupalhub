@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * Mail module file for DrupalHub social.
+ */
+
+/**
+ * Twitter local consumer key
+ */
+define('TWITTER_KEY', '31u5KDR3gHY6LwaXuiRg');
+
+/**
+ * Twitter local consumer secret
+ */
+define('TWITTER_SECRET', 'xKZPt7AeiMki3ul4qTAJbkQEv90IVqYW1tiDEAWtuU');
