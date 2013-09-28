@@ -65,6 +65,7 @@ dependencies[] = migrate_ui
 dependencies[] = module_filter
 dependencies[] = nodequeue
 dependencies[] = page_title
+dependencies[] = pathauto
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = panels_mini
@@ -103,6 +104,7 @@ dependencies[] = fe_user
 dependencies[] = fe_user_activity
 
 ; DrupalHub
+dependencies[] = drupalhub
 dependencies[] = drupalhub_migrate
 dependencies[] = drupalhub_notify
 dependencies[] = drupalhub_pages

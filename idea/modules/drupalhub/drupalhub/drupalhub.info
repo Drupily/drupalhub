@@ -1,0 +1,9 @@
+name = DrupalHub
+core = 7.x
+package = DrupalHub
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[variable][] = pathauto_node_pattern
+features[variable][] = pathauto_taxonomy_term_pattern
