@@ -66,6 +66,9 @@ dependencies[] = module_filter
 dependencies[] = nodequeue
 dependencies[] = page_title
 dependencies[] = pathauto
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = panels_mini
 dependencies[] = quicktabs
 dependencies[] = radioactivity
 dependencies[] = rules_admin
@@ -104,6 +107,7 @@ dependencies[] = fe_user_activity
 dependencies[] = drupalhub
 dependencies[] = drupalhub_migrate
 dependencies[] = drupalhub_notify
+dependencies[] = drupalhub_pages
 
 files[] = openideal.profile
 

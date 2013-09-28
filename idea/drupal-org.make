@@ -129,6 +129,9 @@ projects[page_title][subdir] = contrib
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = contrib
 
+projects[panels][version] = "3.3"
+projects[panels][subdir] = contrib
+
 projects[quicktabs][version] = "3.5"
 projects[quicktabs][subdir] = contrib
 
