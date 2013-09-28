@@ -20,6 +20,10 @@ function drupalhub_social_install() {
     'fboauth_id' => FACEBOOK_ID,
     'fboauth_secret' => FACEBOOK_SECRET,
     'fboauth_user_username' => 'name',
+
+    // Github Settings
+    'github_connect_client_id' => GITHUB_ID,
+    'github_connect_client_secret' => GITHUB_SECRET,
   );
 
   foreach ($settings as $name => $value) {

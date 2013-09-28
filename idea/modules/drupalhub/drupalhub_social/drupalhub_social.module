@@ -25,6 +25,16 @@ define('FACEBOOK_ID', '197114067137623');
 define('FACEBOOK_SECRET', '5413a965a5332ba5bf411eb48a814f27');
 
 /**
+ * Github ID.
+ */
+define('GITHUB_ID', 'fa43e37f80ff324af010');
+
+/**
+ * Github secret
+ */
+define('GITHUB_SECRET', '3aebce3c7902bd954c19eb55647cf2329744aa21');
+
+/**
  * Implements hook_form_FORM_ID_alter().
  */
 function drupalhub_social_form_alter(&$form, $form_state, $form_id) {
@@ -48,6 +58,7 @@ function drupalhub_social_set_buttons($form, $form_state) {
     '#markup' => theme('item_list', array('items' => $items)),
     '#weight' => 10,
   );
+
 
   return $form;
 }
