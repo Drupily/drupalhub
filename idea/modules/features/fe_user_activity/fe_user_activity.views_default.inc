@@ -101,6 +101,15 @@ function fe_user_activity_views_default_views() {
   $handler->display->display_options['arguments']['user']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['user']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['user']['not'] = 0;
+  /* Filter criterion: Message: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'message';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'log_new_comment' => 'log_new_comment',
+    'log_new_content' => 'log_new_content',
+    'log_new_vote' => 'log_new_vote',
+  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
