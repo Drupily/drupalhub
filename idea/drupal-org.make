@@ -193,8 +193,9 @@ projects[wysiwyg_filter][version] = "1.6-rc2"
 projects[wysiwyg_filter][subdir] = contrib
 
 ; Themes
-projects[sasson][version] = "2.10"
-projects[plato][version] = "1.0"
+projects[bootstrap] = bootstrap
+projects[bootstrap][version] = 3.0
+projects[bootstrap][type] = "theme"
 
  ; Libraries
 libraries[jquery_caret_position][download][type] = "git"

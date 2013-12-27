@@ -1,0 +1,7 @@
+www
+.idea
+.gitignore
+install.sh
+idea/modules/contrib
+idea/themes/bootstrap
+idea/libraries
