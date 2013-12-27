@@ -87,6 +87,9 @@ projects[imce_wysiwyg][subdir] = contrib
 projects[inline_devel][version] = "2.0"
 projects[inline_devel][subdir] = contrib
 
+projects[jquery_update][version] = "2.3"
+projects[jquery_update][subdir] = contrib
+
 projects[libraries][version] = "2.1"
 projects[libraries][subdir] = contrib
 
@@ -131,6 +134,9 @@ projects[pathauto][subdir] = contrib
 
 projects[panels][version] = "3.3"
 projects[panels][subdir] = contrib
+
+projects[panels_bootstrap_layouts][version] = "7.x-3.x-dev"
+projects[panels_bootstrap_layouts][subdir] = contrib
 
 projects[quicktabs][version] = "3.5"
 projects[quicktabs][subdir] = contrib
