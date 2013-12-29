@@ -135,7 +135,7 @@ projects[pathauto][subdir] = contrib
 projects[panels][version] = "3.3"
 projects[panels][subdir] = contrib
 
-projects[panels_bootstrap_layouts][version] = "7.x-3.x-dev"
+projects[panels_bootstrap_layouts][version] = "3.x-dev"
 projects[panels_bootstrap_layouts][subdir] = contrib
 
 projects[quicktabs][version] = "3.5"
