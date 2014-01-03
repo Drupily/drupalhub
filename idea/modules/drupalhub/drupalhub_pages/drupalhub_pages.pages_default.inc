@@ -213,13 +213,13 @@ function drupalhub_pages_default_page_manager_pages() {
       'top' => NULL,
       'left' => array(
         'column_type' => 'col-lg',
-        'column_size' => '6',
+        'column_size' => '3',
         'offset_type' => 'col-lg-offset',
         'offset_size' => '0',
       ),
       'right' => array(
         'column_type' => 'col-lg',
-        'column_size' => '6',
+        'column_size' => '9',
         'offset_type' => 'col-lg-offset',
         'offset_size' => '0',
       ),
@@ -239,31 +239,29 @@ function drupalhub_pages_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-1';
     $pane->panel = 'left';
-    $pane->type = 'views';
-    $pane->subtype = 'frontpage_ideas';
+    $pane->type = 'messages';
+    $pane->subtype = 'messages';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '10',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'address' => '',
+      'form_build_id' => 'form-xx9fZQo7tDISLKNh-7_RyQQUhbb1ef8xHTDn0muzPH4',
+      'form_token' => 'Zv_HZ8uDdSCEO5gCG2a9uLvZjEVjz_R-s1TLIKUs1HE',
+      'form_id' => 'drupalhub_pages_messages_content_type_edit_form',
+      'op' => 'Finish',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'no-mobile',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
@@ -271,6 +269,37 @@ function drupalhub_pages_default_page_manager_pages() {
     $display->panels['left'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'left';
+    $pane->type = 'messages';
+    $pane->subtype = 'messages';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 1,
+      'override_title_text' => '',
+      'address' => 'no-mobile',
+      'form_build_id' => 'form-XCWBoTPm6lK6GcqPXdD-xcc2YUtfjktOhuMdAftQlN8',
+      'form_token' => 'Zv_HZ8uDdSCEO5gCG2a9uLvZjEVjz_R-s1TLIKUs1HE',
+      'form_id' => 'drupalhub_pages_messages_content_type_edit_form',
+      'op' => 'Finish',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'messages',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['left'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'most_active_users';
@@ -300,10 +329,10 @@ function drupalhub_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['right'][0] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['front_page'] = $page;
