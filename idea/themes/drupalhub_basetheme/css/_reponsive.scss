@@ -1,0 +1,11 @@
+$phones-width: 480px;
+/* TODO: Check */
+$tablets-width: 1000px;
+
+.no-mobile {
+
+  @media screen and (max-width: $phones-width) {
+    visibility: hidden;
+    height: 0px;
+  }
+}
