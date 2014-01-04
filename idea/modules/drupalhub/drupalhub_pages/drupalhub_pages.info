@@ -16,3 +16,4 @@ features[page_manager_handlers][] = node_view_panel_context
 features[page_manager_pages][] = front_page
 features[panels_mini][] = question_display
 features[views_view][] = idea_comments
+features[views_view][] = main_page_questions

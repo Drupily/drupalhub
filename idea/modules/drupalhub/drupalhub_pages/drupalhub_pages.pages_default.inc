@@ -219,9 +219,9 @@ function drupalhub_pages_default_page_manager_pages() {
       ),
       'right' => array(
         'column_type' => 'col-lg',
-        'column_size' => '9',
+        'column_size' => '8',
         'offset_type' => 'col-lg-offset',
-        'offset_size' => '0',
+        'offset_size' => '1',
       ),
       'bottom' => NULL,
     ),
@@ -244,12 +244,12 @@ function drupalhub_pages_default_page_manager_pages() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
       'return' => 'Finish',
       'cancel' => 'Cancel',
+      'override_title' => 1,
+      'override_title_text' => '',
       'address' => '',
-      'form_build_id' => 'form-xx9fZQo7tDISLKNh-7_RyQQUhbb1ef8xHTDn0muzPH4',
+      'form_build_id' => 'form-mvA77vgd0QwHGKqBk_U4TMN_0zL50erGZfcv3RRXjjw',
       'form_token' => 'Zv_HZ8uDdSCEO5gCG2a9uLvZjEVjz_R-s1TLIKUs1HE',
       'form_id' => 'drupalhub_pages_messages_content_type_edit_form',
       'op' => 'Finish',
@@ -279,8 +279,8 @@ function drupalhub_pages_default_page_manager_pages() {
       'cancel' => 'Cancel',
       'override_title' => 1,
       'override_title_text' => '',
-      'address' => 'no-mobile',
-      'form_build_id' => 'form-XCWBoTPm6lK6GcqPXdD-xcc2YUtfjktOhuMdAftQlN8',
+      'address' => '',
+      'form_build_id' => 'form-SYFYmW9CQFIdMbX4GcqKPbpehH_NjYMv1ZD84yUO-X4',
       'form_token' => 'Zv_HZ8uDdSCEO5gCG2a9uLvZjEVjz_R-s1TLIKUs1HE',
       'form_id' => 'drupalhub_pages_messages_content_type_edit_form',
       'op' => 'Finish',
@@ -291,7 +291,7 @@ function drupalhub_pages_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'messages',
+      'css_class' => 'no-mobile',
     );
     $pane->extras = array();
     $pane->position = 1;
@@ -300,27 +300,43 @@ function drupalhub_pages_default_page_manager_pages() {
     $display->panels['left'][1] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = 'right';
-    $pane->type = 'views';
-    $pane->subtype = 'most_active_users';
+    $pane->panel = 'left';
+    $pane->type = 'messages';
+    $pane->subtype = 'messages';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '10',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
-      'override_title' => 0,
+      'return' => 'Finish',
+      'cancel' => 'Cancel',
+      'override_title' => 1,
       'override_title_text' => '',
+      'address' => '',
+      'form_build_id' => 'form-9ADPEICMu70SzROm5oyJTJ4XIGgyAjpe7mIB_f5WIKs',
+      'form_token' => 'Zv_HZ8uDdSCEO5gCG2a9uLvZjEVjz_R-s1TLIKUs1HE',
+      'form_id' => 'drupalhub_pages_messages_content_type_edit_form',
+      'op' => 'Finish',
     );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'no-mobile',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['left'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'main_page_questions-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -329,8 +345,8 @@ function drupalhub_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
