@@ -1,7 +1,7 @@
 www
 .idea
-.gitignore
 install.sh
-idea/modules/contrib
-idea/themes/bootstrap
+idea/modules/contrib/*
+idea/themes/contrib
 idea/libraries
+.DS_store
