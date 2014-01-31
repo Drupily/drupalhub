@@ -49,6 +49,7 @@ cd $ROOT
   fi
 
   # Move the profile in place.
+  rm -rf $BUILD_ROOT/www-build/profiles/idea
   ln -s ../../idea $BUILD_ROOT/www-build/profiles/idea
 
   # Fix permisions before deleting.
