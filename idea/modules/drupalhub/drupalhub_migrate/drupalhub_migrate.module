@@ -15,6 +15,7 @@ function drupalhub_migrate_migrate_api() {
       'DrupalHubUsers' => array('class_name' => 'DrupalHubUsers'),
       'DrupalHubCategoryTerms' => array('class_name' => 'DrupalHubCategoryTerms'),
       'DrupalHubIdeaComments' => array('class_name' => 'DrupalHubIdeaComments'),
+      'DrupalHubBlog' => array('class_name' => 'DrupalHubBlog'),
     ),
   );
   return $api;
