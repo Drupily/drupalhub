@@ -11,7 +11,7 @@ function drupalhub_pages_messages_content_type_render($subtype, $conf, $args, $c
   $block->title = '';
   $block->content = '
   <div class="panel panel-default">
-              <div class="panel-heading">Title hereg</div>
+              <div class="panel-heading">Title here</div>
               <div class="panel-body">
                 Content here.
               </div>
