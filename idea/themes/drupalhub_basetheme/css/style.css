@@ -23,3 +23,8 @@ body {
 .pane-front-page-blogs-panel-pane-1 .views-field-picture {
   float: left;
   padding-right: 10px; }
+
+.social-links li {
+  float: left;
+  display: inline;
+  padding-right: 5px; }
