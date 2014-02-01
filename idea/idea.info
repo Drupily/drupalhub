@@ -51,6 +51,7 @@ dependencies[] = htmlmail
 dependencies[] = ideal_comments
 dependencies[] = imce_mkdir
 dependencies[] = imce_wysiwyg
+dependencies[] = insert
 dependencies[] = inline_devel
 dependencies[] = jquery_update
 dependencies[] = libraries

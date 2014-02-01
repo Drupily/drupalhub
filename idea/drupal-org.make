@@ -84,6 +84,9 @@ projects[imce_mkdir][subdir] = contrib
 projects[imce_wysiwyg][version] = "1.0"
 projects[imce_wysiwyg][subdir] = contrib
 
+projects[insert][version] = "1.3"
+projects[insert][subdir] = contrib
+
 projects[inline_devel][version] = "2.0"
 projects[inline_devel][subdir] = contrib
 
