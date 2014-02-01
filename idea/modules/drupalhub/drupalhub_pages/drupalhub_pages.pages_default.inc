@@ -333,7 +333,7 @@ function drupalhub_pages_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'main_page_questions-panel_pane_1';
+    $pane->subtype = 'front_page_blogs-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -347,6 +347,24 @@ function drupalhub_pages_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['right'][0] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'main_page_questions-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][1] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
