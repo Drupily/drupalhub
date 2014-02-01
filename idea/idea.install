@@ -323,7 +323,7 @@ function idea_install() {
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
   variable_set('jquery_update_jquery_version', '1.8');
-  variable_set('jquery_update_jquery_admin_version', '1.5';
+  variable_set('jquery_update_jquery_admin_version', '1.5');
 
   variable_set('caret_position', 'profiles/idea/libraries/jquery_caret_position');
   variable_set('page_manager_node_view_disabled', FALSE);
