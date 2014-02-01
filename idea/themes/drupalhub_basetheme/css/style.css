@@ -19,3 +19,7 @@ body {
 .page-header {
   padding-top: 40px;
   border: none; }
+
+.pane-front-page-blogs-panel-pane-1 .views-field-picture {
+  float: left;
+  padding-right: 10px; }
