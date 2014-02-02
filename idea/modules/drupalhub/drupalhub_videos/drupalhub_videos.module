@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalHub Videos feature.
+ */
+
+include_once 'drupalhub_videos.features.inc';
