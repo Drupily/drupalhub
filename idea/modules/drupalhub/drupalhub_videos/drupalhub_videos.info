@@ -35,4 +35,5 @@ features[variable][] = menu_parent_youtube
 features[variable][] = node_options_youtube
 features[variable][] = node_preview_youtube
 features[variable][] = node_submitted_youtube
+features[variable][] = pathauto_node_youtube_pattern
 features[views_view][] = videos
