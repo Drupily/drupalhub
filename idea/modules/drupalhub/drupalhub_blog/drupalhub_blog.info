@@ -1,7 +1,7 @@
 name = DrupalHub blog
 description = Blog for DrupalHub
 core = 7.x
-package = Other
+package = DrupalHub
 php = 5.2.4
 dependencies[] = ctools
 dependencies[] = features
