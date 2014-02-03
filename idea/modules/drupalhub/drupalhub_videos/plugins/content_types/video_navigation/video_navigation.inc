@@ -21,10 +21,28 @@ function drupalhub_videos_video_navigation_content_type_render($subtype, $conf, 
     return FALSE;
   }
 
+  $nid_operator = $conf['navigation_type'] == 'next' ? '<' : '>';
+  $order_type = $conf['navigation_type'] == 'next' ? 'DESC' : 'ASC';
+
+  $query = new EntityFieldQuery();
+  $results = $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'youtube')
+    ->propertyCondition('nid', $context->data->nid, $nid_operator)
+    ->propertyOrderBy('created', $order_type)
+    ->range(0, 1)
+    ->execute();
+
+  if (empty($results['node'])) {
+    return;
+  }
+
+
   $block = new stdClass();
-  $block->module = 'og_ui';
+  $block->module = 'drupalhub_videos';
   $block->title = '';
-  $block->content = $conf['navigation_type'];
+  // Temp for now. Until the deseing is finished.
+  $block->content = l($conf['navigation_type'], 'node/' . reset($results['node'])->nid);
   return $block;
 }
 
