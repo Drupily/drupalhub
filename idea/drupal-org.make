@@ -48,6 +48,9 @@ projects[entityreference][subdir] = contrib
 projects[faq][version] = "1.0-rc2"
 projects[faq][subdir] = contrib
 
+projects[fboauth][version] = "1.6"
+projects[fboauth][subdir] = contrib
+
 projects[features][version] = "1.0"
 projects[features][subdir] = contrib
 
@@ -68,6 +71,11 @@ projects[flag_abuse][subdir] = contrib
 
 projects[forward][version] = "1.4"
 projects[forward][subdir] = contrib
+
+projects[github_connect][download][type] = git
+projects[github_connect][download][branch] = 7.x-1.x
+projects[github_connect][download][revision] = e091c59
+projects[github_connect][subdir] = contrib
 
 projects[htmlmail][version] = "2.65"
 projects[htmlmail][subdir] = contrib
@@ -129,6 +137,9 @@ projects[migrate][subdir] = contrib
 projects[nodequeue][version] = "2.0-beta1"
 projects[nodequeue][subdir] = contrib
 
+projects[oauth][version] = 3.1
+projects[oauth][subdir] = contrib
+
 projects[page_title][version] = "2.7"
 projects[page_title][subdir] = contrib
 
@@ -164,6 +175,9 @@ projects[token][subdir] = contrib
 
 projects[top_searches][version] = "1.0"
 projects[top_searches][subdir] = contrib
+
+projects[twitter][version] = "5.8"
+projects[twitter][subdir] = contrib
 
 projects[userpoints][version] = "1.0"
 projects[userpoints][subdir] = contrib
