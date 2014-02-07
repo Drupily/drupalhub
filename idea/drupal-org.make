@@ -72,8 +72,8 @@ projects[flag_abuse][subdir] = contrib
 projects[forward][version] = "1.4"
 projects[forward][subdir] = contrib
 
-projects[github][version] = 1.1
-projects[github][subdir] = contrib
+projects[github_connect][version] = 1.1
+projects[github_connect][subdir] = contrib
 
 projects[htmlmail][version] = "2.65"
 projects[htmlmail][subdir] = contrib
