@@ -72,7 +72,9 @@ projects[flag_abuse][subdir] = contrib
 projects[forward][version] = "1.4"
 projects[forward][subdir] = contrib
 
-projects[github_connect][version] = 1.1
+projects[github_connect][download][type] = git
+projects[github_connect][download][branch] = 7.x-1.x
+projects[github_connect][download][revision] = e091c59
 projects[github_connect][subdir] = contrib
 
 projects[htmlmail][version] = "2.65"
