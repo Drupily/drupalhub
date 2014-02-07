@@ -113,6 +113,7 @@ dependencies[] = drupalhub_blog
 dependencies[] = drupalhub_migrate
 dependencies[] = drupalhub_notify
 dependencies[] = drupalhub_pages
+dependencies[] = drupalhub_social
 dependencies[] = drupalhub_videos
 
 files[] = openideal.profile
