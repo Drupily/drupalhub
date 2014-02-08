@@ -1,7 +1,9 @@
 name = DrupalHub
 core = 7.x
 package = DrupalHub
+php = 5.2.4
 dependencies[] = ctools
+dependencies[] = features
 dependencies[] = filter
 dependencies[] = strongarm
 dependencies[] = wysiwyg
