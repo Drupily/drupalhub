@@ -28,3 +28,38 @@ function drupalhub_pages_node_load($nodes, $types) {
 
   drupal_add_css(drupal_get_path('module', 'drupalhub_pages') . '/css/drupalhub_pages.css');
 }
+
+/**
+ * Return an array of tagged terms.
+ */
+function drupalhub_pages_tagges_terms() {
+  // ti stands for taxonomy index.
+  $query = db_select('taxonomy_index', 'ti');
+
+  // td stands for taxonomy data.
+  $query->join('taxonomy_term_data', 'td', 'td.tid = ti.tid');
+
+  return $query
+    ->fields('td', array('tid'))
+    ->execute()
+    ->fetchAllAssoc('tid');
+}
+
+/**
+ * Get the number of tagged nodes per term.
+ */
+function drupalhub_pages_count_tagged_entities($tid) {
+  $query = db_select('taxonomy_index', 'ti');
+  return $query
+    ->fields('ti', array('tid'))
+    ->condition('ti.tid', $tid)
+    ->execute()
+    ->rowCount();
+}
+
+/**
+ * usort callback function; Order the terms by the number of tagged items.
+ */
+function drupalhub_pages_order_terms($a, $b) {
+  return $a['tagged'] > $b['tagged'] ? -1 : 1;
+}
