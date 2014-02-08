@@ -22,3 +22,9 @@
   float: left;
   padding-right: 10px;
 }
+
+/* Styling the tagged terms item list */
+ul.tagged_items {
+  list-style-type: none;
+  padding-left: 5px;
+}
