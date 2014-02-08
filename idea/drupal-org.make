@@ -209,11 +209,13 @@ projects[watcher][subdir] = contrib
 projects[webform][version] = "3.19"
 projects[webform][subdir] = contrib
 
-projects[wysiwyg][version] = "2.2"
-projects[wysiwyg][subdir] = contrib
+projects[wysiwyg][subdir] = "contrib"
+projects[wysiwyg][version] = 2.2
+projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-remove-breaks-1964806-2.patch"
+projects[wysiwyg][patch][] = "http://drupal.org/files/wysiwyg-table-format.patch"
 
-projects[wysiwyg_filter][version] = "1.6-rc2"
-projects[wysiwyg_filter][subdir] = contrib
+projects[wysiwyg_filter][subdir] = "contrib"
+projects[wysiwyg_filter][version] = 1.6-rc2
 
 ; Themes
 projects[bootstrap] = bootstrap
@@ -224,3 +226,7 @@ projects[bootstrap][type] = "theme"
 libraries[jquery_caret_position][download][type] = "git"
 libraries[jquery_caret_position][type] = "libraries"
 libraries[jquery_caret_position][download][url] = "https://github.com/wolasss/jquery-caret-position-getter.git"
+
+ibraries[tinymce][type] = "libraries"
+libraries[tinymce][download][type] = "file"
+libraries[tinymce][download][url] = "http://github.com/downloads/tinymce/tinymce/tinymce_3.5.8.zip"
