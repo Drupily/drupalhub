@@ -376,6 +376,30 @@ photos, youtube movies.',
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'right';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<?php print l(t(\'More blog posts\'), \'blogs\'); ?>',
+      'format' => 'php_code',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['right'][1] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'main_page_questions-panel_pane_1';
     $pane->shown = TRUE;
@@ -387,10 +411,10 @@ photos, youtube movies.',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][1] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][2] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -76,6 +76,9 @@ function drupalhub_blog_strongarm() {
         'path' => array(
           'weight' => '30',
         ),
+        'flag' => array(
+          'weight' => '10',
+        ),
       ),
       'display' => array(),
     ),
